@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/constants.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,43 +17,34 @@ class Category extends StatefulWidget {
 }
 
 class _CategoryState extends State<Category> {
-  List<String> categories = [
-    "All",
-    "Bangladeshi",
-    "Italian",
-    "Chinese",
-    "Mexican",
-    "Kashmiri"
-  ];
-  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 600,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
-        itemBuilder: (context, index) => buildCategories(index),
+    return Container(
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(
+              'Loyality',
+              style: TextStyle(
+                  color: Colors.red[200],
+                  fontSize: 18,
+                  fontFamily: 'Martel',
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Menu',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontFamily: 'Martel',
+                  fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
       ),
       
-    );
-  }
-
-  Widget buildCategories(int index) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      child: Container(
-      // alignment: Alignment.center,
-        margin: EdgeInsets.only(left: 10),
-        decoration: BoxDecoration(
-          color: Color(0xFFEFF3EE),
-          borderRadius: BorderRadius.circular(20)
-        ),
-        child: Text(
-            categories[index],
-            style: TextStyle(fontSize: 17, color: kPrimaryColor, fontWeight: FontWeight.bold), 
-          ),
-      ),
     );
   }
 }

@@ -12,15 +12,28 @@ class HomeScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
-      leading: IconButton(icon : Icon(Icons.restaurant_menu, color: Colors.black, size: 29),
-       onPressed: (){},
-       ),
-       title: Image.asset("assets/images/logo.png"),
-       centerTitle: true,
-       actions: [
-         IconButton(icon: Icon(Icons.search, color: Colors.black, size: 29,),
-          onPressed: null)
-       ],
+      leading: IconButton(
+        icon: Icon(Icons.restaurant_menu, color: Colors.black, size: 29),
+        onPressed: () {},
+      ),
+      title: Image.asset("assets/images/logo.png"),
+      centerTitle: true,
+      actions: [
+        IconButton(
+            icon: Icon(
+              Icons.search,
+              color: Colors.black,
+              size: 29,
+            ),
+            onPressed: () {}),
+        IconButton(
+            icon: Icon(
+              Icons.person,
+              color: Colors.black,
+              size: 29,
+            ),
+            onPressed: () {})
+      ],
     );
   }
 }
