@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Food App',
       theme: ThemeData(
         backgroundColor: Colors.white,
-        appBarTheme: AppBarTheme(color: Colors.white, elevation: 0),
+        appBarTheme: AppBarTheme(color: Colors.blue[100], elevation: 0),
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
